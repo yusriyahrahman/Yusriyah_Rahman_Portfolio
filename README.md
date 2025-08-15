@@ -1,4 +1,4 @@
-# Personal Portfolio — Karanveer Singh Sidhu
+# Personal Portfolio — Yusriyah Rahman
 
 A modern, fully responsive personal portfolio built with **React** and **Tailwind CSS**, designed to showcase my **AI/ML research**, **software engineering skills**, and **projects** in a clean and professional way.  
 
