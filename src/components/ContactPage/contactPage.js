@@ -55,16 +55,15 @@ const ContactPage = () => {
         <div className="mt-4 text-center text-lg text-gray-300">
           <div>
             <span className="font-semibold">Email:</span>{" "}
-            <a href="mailto:sidhu66@uwindsor.ca" className="text-amber-400 hover:underline">
-              sidhu66@uwindsor.ca
+            <a href="mailto:rahman4n@uwindsor.ca" className="text-amber-400 hover:underline">
+              rahman4n@uwindsor.ca
             </a>{" "}
             <span className="mx-2 text-gray-500">||</span>
             <span className="font-semibold">Phone:</span>{" "}
-            <a href="tel:16476211166" className="text-amber-400 hover:underline">
-              647-621-1166
+            <a href="tel:12267590055" className="text-amber-400 hover:underline">
+              226-759-0055
             </a>
           </div>
-          <p className="mt-2 text-gray-400">…or use the following form</p>
         </div>
 
         {/* Status banner */}

@@ -1,6 +1,6 @@
 import React from "react";
-// import bg from "../../assests/image.webp";           // background photo
-import avatar from "../../assests/profile.jpeg";      // <-- replace with your headshot
+//import bg from "../../assests/bkg.webp";           // background photo
+import avatar from "../../assests/profile.jpg";      // <-- replace with your headshot
 import { Link } from "react-scroll";
 
 const Intro = () => {
@@ -17,20 +17,17 @@ const Intro = () => {
         {/* Avatar */}
         <img
           src={avatar}
-          alt="Karanveer Sidhu"
+          alt="Yusriyah Rahman"
           className="h-40 w-40 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64 rounded-full ring-4 ring-white shadow-2xl mb-6 object-cover"
 
         />
 
         {/* Name */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight">
-          Karanveer Sidhu
+          Yusriyah Rahman
         </h1>
 
-        {/* Subtitle */}
-        <p className="mt-4 text-xl sm:text-2xl italic text-gray-200">
-          Software Engineer · AI/ML Researcher
-        </p>
+        
 
         {/* CTA buttons */}
         <div className="mt-8 flex items-center gap-4">

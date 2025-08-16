@@ -18,7 +18,7 @@ const Navbar = () => {
                     className="hover:text-white transition cursor-pointer"
                 >
                     <span className="text-lg font-bold text-white">
-                        <span className="text-yellow-500">Karanveer Sidhu</span>
+                        <span className="text-yellow-500">Yusriyah Rahman</span>
                     </span>
 
                 </Link>
