@@ -6,6 +6,11 @@ import commandLineCalculator from "../../assests/Calculator.png";
 import calendar from "../../assests/spam.jpg";
 import LLM_Server from "../../assests/MAg.gif";
 import Tama from "../../assests/Tama.webp";
+import StRc from "../../assests/StRc.jpg";
+import C4 from "../../assests/C4.webp";
+import CP from "../../assests/CP.jpg";
+import pong from "../../assests/pong.gif";
+import PM from "../../assests/PM.gif";
 
 // Small pill for tech stack
 const Badge = ({ children }) => (
@@ -16,9 +21,17 @@ const Badge = ({ children }) => (
 
 const projects = [
   {
+    title: "Car Parking Sensor",
+    summary:
+      "Collaborated with my partner to construct a car parking sensor system wired with Arduino hardware in order to warn cars about how close their surroundings are while backing up to park.",
+    tech: ["C++", "Arduino"],
+    links: { demo: "" },
+    image: CP,
+  },
+  {
     title: "Clothing Identifier Neural Network Architecture",
     summary:
-      "Trained a neural network architecture to identify articles of clothing from images which can be blurry as well",
+      "Trained a neural network architecture to identify articles of clothing from images which can be blurry as well.",
     tech: ["Python", "Matplotlib", "NumPy", "TensorFlow", "Keras", "Panda"],
     links: { demo: "" },
     image: LADY,
@@ -34,7 +47,7 @@ const projects = [
   {
     title: "Multi AI Agent Automation Workflow",
     summary:
-      "Designed & deployed an orchestrated workflow consisted of automated agents which collaborate across tasks (summarization, web search, file analysis, etc) to output the defined goal",
+      "Designed & deployed an orchestrated workflow consisted of automated agents which collaborate across tasks (summarization, web search, file analysis, etc) to output the defined goal.",
     tech: ["Google AI Studio", "Docker", "Gemini", "n8n,", "HTML", "ngrok"],
     links: { demo: "" },
     image: LLM_Server,
@@ -42,10 +55,19 @@ const projects = [
   {
     title: "AI Travel Assistant ChatBot",
     summary:
-      "Designed & deployed a Conversational AI Agent connected to data sources and APIs to automate the defined goal",
+      "Designed & deployed a Conversational AI Agent connected to data sources and APIs to automate the defined goal.",
     tech: ["Google Cloud Vertex AI"],
     links: { demo: "" },
     image: Ecommerce,
+  },
+  
+  {
+    title: "Backend Student Records Database Management System",
+    summary:
+      "Created a database system to add, remove, and search for student records.",
+    tech: ["C"],
+    links: { demo: "" },
+    image: StRc,
   },
   {
     title: "C Command-Line Calculator",
@@ -55,15 +77,35 @@ const projects = [
     links: { demo: "" },
     image: commandLineCalculator,
   },
+  {
+    title: "Pacman",
+    summary:
+      "User controls the Pac-Man avatar using the arrow keys. Their goal is to earn points by eating the pellets scattered accross the maze. They have to do this while avoiding ghosts which are chasing it.",
+    tech: ["Python"],
+    links: { demo: "" },
+    image: PM,
+  },
+  {
+    title: "Multiplayer Connect 4 Game ",
+    summary:
+      "Created a text-based Connect 4 game by implemented nested functions, if statements, and switch cases to manage players’ decisions.",
+    tech: ["C"],
+    links: { demo: "" },
+    image: C4,
+  },
+
+  {
+    title: "Multiplayer Ping Pong Game",
+    summary:
+      "Each player controls a paddle that moves up and down to hit a ball back and forth. Points are earned when the opposing player fails to return the ball back.",
+    tech: ["Java"],
+    links: { demo: "" },
+    image: pong,
+  },
 
   {
     title: "Tamagotchi Simulator",
-    summary:[
-      "Virtual pet simulation game",
-      "User interacts with pet by communicating with it",
-      "User can control the pet’s mood with their interactions as well as how hungry the pet is by feeding them",
-      "Pet continuously responds to user interactions & communications depending on its mood & hunger"
-    ],
+    summary: 'Virtual pet simulation game where user interacts with pet by communicating with it and feeding it.',
     tech: ["Java"],
     links: { demo: "" },
     image: Tama,
