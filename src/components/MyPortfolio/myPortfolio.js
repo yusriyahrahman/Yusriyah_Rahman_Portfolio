@@ -1,82 +1,67 @@
 import React from "react";
 // Optional local thumbs; you can keep/remove these
-import Ecommerce from "../../assests/E-commerce.png";
-import LADY from "../../assests/LADY.png";
-import commandLineCalculator from "../../assests/Command_Line_Calculator.webp";
-import calendar from "../../assests/Calendar.jpg";
-import LLM_Server from "../../assests/LLM_Server.png";
-
+import Ecommerce from "../../assests/Chatbot.jpg";
+import LADY from "../../assests/clothes.avif";
+import commandLineCalculator from "../../assests/Calculator.png";
+import calendar from "../../assests/spam.jpg";
+import LLM_Server from "../../assests/MAg.gif";
 
 // Small pill for tech stack
 const Badge = ({ children }) => (
-  <span className="inline-block rounded-md border border-gray-700 px-2.5 py-1 text-xs text-gray-300">
+  <span className="inline-block rounded-md border border-cyan-500 bg-navy px-2.5 py-1 text-xs text-cyan-300">
     {children}
   </span>
 );
 
 const projects = [
   {
-    title: "LADy — Latent Aspect Detection",
+    title: "Clothing Identifier Neural Network Architecture",
     summary:
-      "Research framework for ABSA: dataset integration (SemEval, Google Reviews), preprocessing, evaluation (P/R/F1), and prompt/JSON guardrails.",
-    tech: ["Python", "PyTorch", "LLMs", "FastAPI"],
-    links: {
-      code: "https://github.com/sidhu66/LADy", // put repo link if public
-      demo: "",
-    },
+      "Trained a neural network architecture to identify articles of clothing from images which can be blurry as well",
+    tech: ["Python", "Matplotlib", "NumPy", "TensorFlow", "Keras", "Panda"],
+    links: { demo: "" },
     image: LADY,
   },
   {
-    title: "LLM Model Server (Gemma/DeepSeek)",
+    title: "Spam Detector",
     summary:
-      "Self-hosted API with FastAPI + Uvicorn. GPU scheduling, JSON-safe outputs, and health/metrics endpoints for evaluation jobs.",
-    tech: ["FastAPI", "CUDA", "GitHub Actions"],
-    links: { code: "https://github.com/sidhu66/LLM_Model_Server", demo: "" },
+      "Users input emails for processing through the model to predict spam status through the embedded Flask web app. The app integrated the machine learning model using Logistic Regression & CountVectorizer and preprocessing steps into the app for real-time predictions.",
+    tech: ["Python", "Flask"],
+    links: { demo: "" },
+    image: calendar,
+  },
+  {
+    title: "Multi AI Agent Automation Workflow",
+    summary:
+      "Designed & deployed an orchestrated workflow consisted of automated agents which collaborate across tasks (summarization, web search, file analysis, etc) to output the defined goal",
+    tech: ["Google AI Studio", "Docker", "Gemini", "n8n,", "HTML", "ngrok"],
+    links: { demo: "" },
     image: LLM_Server,
   },
-
   {
-    title: "E-commerce App",
+    title: "AI Travel Assistant ChatBot",
     summary:
-      "Full-stack shop: auth, cart, Stripe test checkout, admin dashboard. React frontend with Django REST backend and PostgreSQL.",
-    tech: ["React", "Django", "PostgreSQL"],
-    links: { code: "https://github.com/sidhu66/E-Commerce-Website", demo: "" },
+      "Designed & deployed a Conversational AI Agent connected to data sources and APIs to automate the defined goal",
+    tech: ["Google Cloud Vertex AI"],
+    links: { demo: "" },
     image: Ecommerce,
   },
-
   {
     title: "C Command-Line Calculator",
-    summary: "A menu-driven CLI calculator with support for binaries (add, exp, mod), unary ops (sqrt, log, ceil/floor), variables, and arrays.",
-    tech: ["C", "CLI", "Variables", "Math Functions"],
-    links: { code: "https://github.com/sidhu66/C-Calculator-Advanced", demo: "" },
+    summary:
+      "Performs mathematical calculations like addition, subtraction, square root, and exponents. Also stores values with memory variables.",
+    tech: ["C"],
+    links: { demo: "" },
     image: commandLineCalculator,
   },
-
-  {
-    title: "Python Calendar CLI",
-    summary: "Command-line tool to manage dated events through add, list, and delete functions.",
-    tech: ["Python", "CLI", "Event Management"],
-    links: {
-      code: "https://github.com/sidhu66/python-calendar-app",
-      demo: ""
-    },
-    image: calendar
-  }
-
-
-
 ];
 
 const MyPortfolio = () => {
   return (
-    <section id="myPortfolio" className="bg-gray-900 text-gray-100 py-16">
+    <section id="myPortfolio" className="bg-[#001f3f] text-cyan-300 py-16">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
-          <h2 className="text-4xl font-bold">My Projects</h2>
-          <p className="mt-3 text-gray-400">
-            A mix of research, ML systems, and full-stack work. Clean code, clear
-            evaluations, and deployable artifacts.
-          </p>
+          <h2 className="text-4xl font-bold text-cyan-200">My Projects</h2>
         </div>
 
         {/* Cards */}
@@ -84,7 +69,7 @@ const MyPortfolio = () => {
           {projects.map((p, i) => (
             <article
               key={i}
-              className="group rounded-xl border border-gray-800 bg-gray-850/50 p-4 shadow transition hover:-translate-y-0.5 hover:shadow-lg"
+              className="group rounded-xl border border-cyan-700 bg-[#001a35] p-4 shadow transition hover:-translate-y-0.5 hover:shadow-lg"
             >
               {p.image ? (
                 <img
@@ -93,13 +78,17 @@ const MyPortfolio = () => {
                   className="h-40 w-full rounded-lg object-cover"
                 />
               ) : (
-                <div className="flex h-40 w-full items-center justify-center rounded-lg border border-gray-800 text-sm text-gray-500">
+                <div className="flex h-40 w-full items-center justify-center rounded-lg border border-cyan-700 text-sm text-cyan-400">
                   No thumbnail
                 </div>
               )}
 
-              <h3 className="mt-4 text-xl font-semibold text-white">{p.title}</h3>
-              <p className="mt-2 text-sm text-gray-300 leading-relaxed">{p.summary}</p>
+              <h3 className="mt-4 text-xl font-semibold text-cyan-200">
+                {p.title}
+              </h3>
+              <p className="mt-2 text-sm text-cyan-300 leading-relaxed">
+                {p.summary}
+              </p>
 
               {/* Tech badges */}
               <div className="mt-3 flex flex-wrap gap-2">
@@ -115,7 +104,7 @@ const MyPortfolio = () => {
                     href={p.links.code}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-md border border-gray-700 px-3 py-1.5 text-sm text-gray-200 hover:border-white hover:text-white transition"
+                    className="rounded-md border border-cyan-600 px-3 py-1.5 text-sm text-cyan-200 hover:border-cyan-400 hover:text-cyan-100 transition"
                   >
                     Code
                   </a>
@@ -125,7 +114,7 @@ const MyPortfolio = () => {
                     href={p.links.demo}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-md bg-blue-600 px-3 py-1.5 text-sm text-white hover:bg-blue-700 transition"
+                    className="rounded-md bg-cyan-600 px-3 py-1.5 text-sm text-navy hover:bg-cyan-500 transition"
                   >
                     Demo
                   </a>
@@ -135,17 +124,7 @@ const MyPortfolio = () => {
           ))}
         </div>
 
-        {/* See more */}
-        <div className="mt-10 text-center">
-          <a
-            href="https://github.com/sidhu66?tab=repositories"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-xl border border-gray-700 px-5 py-3 text-sm font-semibold text-gray-200 hover:border-white hover:text-white transition"
-          >
-            See more on GitHub
-          </a>
-        </div>
+        
       </div>
     </section>
   );

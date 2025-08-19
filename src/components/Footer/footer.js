@@ -6,7 +6,7 @@ const IconButton = ({ href, label, children }) => (
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noreferrer" : undefined}
         aria-label={label}
-        className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:text-white hover:border-white transition"
+        className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-blue-900 text-blue-900 hover:text-blue-700 hover:border-blue-700 transition"
     >
         {children}
         <span className="sr-only">{label}</span>
@@ -15,7 +15,7 @@ const IconButton = ({ href, label, children }) => (
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-800 text-gray-400 ">
+        <footer className="bg-[#a4ebc2] text-blue-900">
             <div className="max-w-6xl mx-auto px-4 py-6">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     <span className="text-sm text-center md:text-left">
