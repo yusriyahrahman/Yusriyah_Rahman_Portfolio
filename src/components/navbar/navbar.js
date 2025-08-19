@@ -31,7 +31,7 @@ const Navbar = () => {
                         offset={-50}
                         className="hover:text-blue-800 transition cursor-pointer"
                     >
-                        About
+                        Me
                     </Link>
                     <Link
                         to="myPortfolio"
@@ -40,7 +40,7 @@ const Navbar = () => {
                         offset={-50}
                         className="hover:text-blue-800 transition cursor-pointer"
                     >
-                        Portfolio
+                        Projects
                     </Link>
                     <Link
                         to="experience"
@@ -95,16 +95,7 @@ const Navbar = () => {
             {/* Mobile Dropdown */}
             {showMenu && (
                 <div className="md:hidden bg-[#a4ebc2] text-[#001f3f] flex flex-col space-y-2 px-4 py-3">
-                    <Link
-                        to="intro"
-                        smooth={true}
-                        duration={500}
-                        offset={-50}
-                        className="hover:text-blue-800"
-                        onClick={() => setShowMenu(false)}
-                    >
-                        Home
-                    </Link>
+                    
                     <Link
                         to="skills"
                         smooth={true}
@@ -113,7 +104,7 @@ const Navbar = () => {
                         className="hover:text-blue-800"
                         onClick={() => setShowMenu(false)}
                     >
-                        About
+                        Me
                     </Link>
                     <Link
                         to="myPortfolio"
@@ -123,7 +114,7 @@ const Navbar = () => {
                         className="hover:text-blue-800"
                         onClick={() => setShowMenu(false)}
                     >
-                        Portfolio
+                        Projects
                     </Link>
                     <Link
                         to="experience"

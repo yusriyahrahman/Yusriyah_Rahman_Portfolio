@@ -9,17 +9,16 @@ const IconButton = ({ href, label, children }) => (
     target={href.startsWith("http") ? "_blank" : undefined}
     rel={href.startsWith("http") ? "noreferrer" : undefined}
     aria-label={label}
-    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-700 text-gray-800 hover:text-white hover:border-white transition"
+    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-green-500 text-green-400 hover:text-black hover:bg-green-400 transition"
   >
     {children}
     <span className="sr-only">{label}</span>
   </a>
 );
 
-
 const Skills = () => {
   return (
-    <section id="skills" className="bg-gray-100 text-gray-800 py-16">
+    <section id="skills" className="bg-black text-green-400 py-16">
       <div className="max-w-6xl mx-auto px-4">
         {/* Top grid: avatar + about text */}
         <div className="grid grid-cols-1 md:grid-cols-[340px,1fr] gap-10 items-start">
@@ -28,7 +27,7 @@ const Skills = () => {
             <img
               src={avatar}
               alt="Yusriyah Rahman"
-              className="h-64 w-64 rounded-full object-cover ring-8 ring-white shadow-xl"
+              className="h-64 w-64 rounded-full object-cover ring-8 ring-green-500 shadow-xl"
             />
             <div className="mt-6 flex items-center gap-4">
               <IconButton href="mailto:rahman4n@uwindsor.ca" label="Email">
@@ -37,7 +36,6 @@ const Skills = () => {
                 </svg>
               </IconButton>
 
-              {/* GitHub */}
               <IconButton href="https://github.com/yusriyahrahman" label="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path fillRule="evenodd" clipRule="evenodd"
@@ -45,7 +43,6 @@ const Skills = () => {
                 </svg>
               </IconButton>
 
-              {/* LinkedIn */}
               <IconButton href="https://www.linkedin.com/in/yusriyahrahman/" label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7.06 19.5H4.56V9h2.5v10.5zM5.81 7.73c-.8 0-1.44-.65-1.44-1.44 0-.79.65-1.43 1.44-1.43s1.44.64 1.44 1.43c0 .79-.64 1.44-1.44 1.44zM20 19.5h-2.5v-5.44c0-1.3-.02-2.97-1.81-2.97-1.81 0-2.08 1.41-2.08 2.87v5.54H11.1V9h2.4v1.43h.03c.33-.62 1.14-1.28 2.35-1.28 2.52 0 2.98 1.66 2.98 3.81V19.5z" />
@@ -56,39 +53,40 @@ const Skills = () => {
 
           {/* Text column */}
           <div>
-            <h2 className="text-3xl font-extrabold text-gray-900">
+            <h2 className="text-3xl font-extrabold text-green-300">
               Welcome to Yusriyah Rahman's Portfolio!
             </h2>
-            <p className="mt-2 text-lg font-semibold text-gray-700">
-              CS (Honours Co-op) @ University of Windsor · AI/ML Researcher · Software Engineer
+            <p className="mt-2 text-lg font-semibold text-green-400">
+              Computer Science & Mathematics Student @ University of Windsor 
             </p>
 
-            <div className="mt-5 space-y-4 leading-relaxed text-gray-700">
+            <div className="mt-5 space-y-4 leading-relaxed text-green-400">
               <p>
-                I build practical AI systems and full-stack tools. Recent work:
-                <strong> LADy</strong> (latent aspect detection for reviews),
-                LLM model serving on university GPUs (FastAPI), and predictive
-                maintenance with CNN/LSTM. I like shipping clean UIs backed by
-                reliable ML pipelines.
+                I am currently pursuing a Bachelor of Computer Science Honours
+                with Co-op at the University of Windsor, driven by a deep curiosity
+                and passion for exploring diverse fields of knowledge. I am always 
+                eager to acquire new skills and insights that broaden my understanding
+                of the world.
               </p>
               <p>
-                Interests: NLP & LLMs (prompting, evals, JSON-safe flows), computer
-                vision, and data engineering. Currently leveling up on transformers
-                and writing neural nets from scratch.
+                My primary interests lie in game and software development, algorithms, 
+                machine learning, artificial intelligence, database management systems, 
+                and all aspects of cloud computing. I enjoy solving complex problems and 
+                bringing my ideas to life through innovative software solutions.
               </p>
             </div>
 
             {/* Education bullets */}
             <div className="mt-6">
-              <h3 className="font-bold text-gray-900">
+              <h3 className="font-bold text-green-300">
                 University of Windsor
               </h3>
-              <ul className="list-disc pl-6 mt-2 space-y-1">
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-green-400">
                 <li>
-                  <strong>Bachelor of Computer Science (Honours Co-op)</strong>, Minor in Mathematics
+                  Bachelor of Computer Science (Honours Co-op), Minor in Mathematics
                 </li>
                 <li>Dean’s Honour Roll</li>
-                <li>Research Assistant — LADy (NLP/ABSA)</li>
+                <li>Dean’s Entrance Scholarship</li>
               </ul>
             </div>
           </div>
@@ -96,17 +94,16 @@ const Skills = () => {
 
         {/* Learn more about my: & buttons */}
         <div className="mt-14 text-center">
-          <h4 className="text-2xl font-extrabold text-gray-900">
+          <h4 className="text-2xl font-extrabold text-green-300">
             Learn more about my:
           </h4>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-
             <Link
               to="myPortfolio"
               smooth={true}
               duration={500}
               offset={-50}
-              className="transition cursor-pointer rounded-xl bg-white px-6 py-4 shadow hover:shadow-lg"
+              className="transition cursor-pointer rounded-xl bg-green-500 text-black px-6 py-4 shadow hover:bg-green-400"
             >
               Projects
             </Link>
@@ -116,30 +113,29 @@ const Skills = () => {
               smooth={true}
               duration={500}
               offset={-50}
-              className="transition cursor-pointer rounded-xl bg-white px-6 py-4 shadow hover:shadow-lg"
+              className="transition cursor-pointer rounded-xl bg-green-500 text-black px-6 py-4 shadow hover:bg-green-400"
             >
               Experience
             </Link>
-
           </div>
         </div>
 
-        {/* Skill buckets like your original */}
+        {/* Skill buckets */}
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-lg p-6 shadow">
-            <h5 className="text-xl font-semibold mb-3">Programming Languages</h5>
-            <p className="text-gray-700">C, Java, Python, JavaScript, HTML/CSS, SQL (Postgres)</p>
+          <div className="bg-green-900 rounded-lg p-6 shadow">
+            <h5 className="text-xl font-semibold mb-3 text-green-200">Programming Languages</h5>
+            <p className="text-green-400">SQL, Python, Java, C, C++, C#, JavaScript, HTML, CSS</p>
           </div>
-          <div className="bg-white rounded-lg p-6 shadow">
-            <h5 className="text-xl font-semibold mb-3">Frameworks & Libraries</h5>
-            <p className="text-gray-700">
-              React, Django, Flask, PyTorch, TensorFlow, scikit-learn, pandas, NumPy, Matplotlib
+          <div className="bg-green-900 rounded-lg p-6 shadow">
+            <h5 className="text-xl font-semibold mb-3 text-green-200">Frameworks & Libraries</h5>
+            <p className="text-green-400">
+              React, Flask, Matplotlib, TensorFlow, Pandas, NumPy, PyTorch, Scikit-Learn, Keras
             </p>
           </div>
-          <div className="bg-white rounded-lg p-6 shadow">
-            <h5 className="text-xl font-semibold mb-3">Tools & Methodologies</h5>
-            <p className="text-gray-700">
-              Docker, GitHub, Jira, Figma, Playwright, Scrum, OpenCV
+          <div className="bg-green-900 rounded-lg p-6 shadow">
+            <h5 className="text-xl font-semibold mb-3 text-green-200">Platforms & Softwares</h5>
+            <p className="text-green-400">
+              Azure, Docker, Google AI Studio, GitHub, CAD, Unity, Blender, Arduino
             </p>
           </div>
         </div>
