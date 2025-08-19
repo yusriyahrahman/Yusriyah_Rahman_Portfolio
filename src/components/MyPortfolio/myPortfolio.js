@@ -5,6 +5,7 @@ import LADY from "../../assests/clothes.avif";
 import commandLineCalculator from "../../assests/Calculator.png";
 import calendar from "../../assests/spam.jpg";
 import LLM_Server from "../../assests/MAg.gif";
+import Tama from "../../assests/Tama.webp";
 
 // Small pill for tech stack
 const Badge = ({ children }) => (
@@ -54,6 +55,19 @@ const projects = [
     links: { demo: "" },
     image: commandLineCalculator,
   },
+
+  {
+    title: "Tamagotchi Simulator",
+    summary:[
+      "Virtual pet simulation game",
+      "User interacts with pet by communicating with it",
+      "User can control the pet’s mood with their interactions as well as how hungry the pet is by feeding them",
+      "Pet continuously responds to user interactions & communications depending on its mood & hunger"
+    ],
+    tech: ["Java"],
+    links: { demo: "" },
+    image: Tama,
+  }
 ];
 
 const MyPortfolio = () => {
